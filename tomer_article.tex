@@ -1,0 +1,432 @@
+%% Tomer Thesis....06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+%\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+\documentclass{bmcart}
+
+%%% Load packages
+% TEMPLATE PACKAGES
+% %\usepackage{amsthm,amsmath}
+% %\RequirePackage{natbib}
+% %\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+% %\RequirePackage{hyperref}
+% \usepackage[utf8]{inputenc} %unicode support
+% %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+% %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+% FROM GILAD
+%\usepackage{amsthm,amsmath}
+%\RequirePackage{natbib}
+%\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{nameref}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{threeparttable}
+\usepackage{subfig}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\useunder{\uline}{\ul}{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\includegraphic{}
+\def\includegraphics{}
+
+
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Tomer's Article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors here                   %%
+%%                                          %%
+%% Specify information, if available,       %%
+%% in the form:                             %%
+%%   <key>={<id1>,<id2>}                    %%
+%%   <key>=                                 %%
+%% Comment or delete the keys which are     %%
+%% not used. Repeat \author command as much %%
+%% as required.                             %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+   addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+   corref={aff1},                       % id of corresponding address, if any
+   noteref={n1},                        % id's of article notes, if any
+   email={tomer.orgad@post.bgu.ac.il}   % email address
+]{\inits{TO}\fnm{Tomer} \snm{Orgad}}
+
+\author[
+ addressref={aff2},
+  corref={aff2},                       % id of corresponding address, if any
+   noteref={n2},                        % id's of article notes, if any
+   email={vaksler@post.bgu.ac.il}
+]{\inits{IVL}\fnm{Isana} \snm{Veksler-Lublinsky}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%% Repeat \address commands as much as      %%
+%% required.                                %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%                           % unique id
+  \orgname{Department of Information Systems Engineering, Ben-Gurion University of the Negev}, % university, etc
+%   \street{Waterloo Road},                     %
+  %\postcode{}                                % post or zip code
+  \city{Beer Sheva},                              % city
+  \cny{Israel}                                    % country
+}
+
+\address[id=aff2]{%                           % unique id
+  \orgname{Department of Information Systems Engineering, Ben-Gurion University of the Negev}, % university, etc
+%   \street{Waterloo Road},                     %
+  %\postcode{}                                % post or zip code
+  \city{Beer Sheva},                              % city
+  \cny{Israel}                                    % country
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{artnotes}
+%\note{Sample of title note}     % note to the article
+\note[id=n1]{Equal contributor} % note, connected to author
+\end{artnotes}
+
+\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract} % abstract
+\parttitle{Background}
+\parttitle{Results} 
+\parttitle{Conclusions} 
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}
+\kwd{key1}
+\kwd{key2}
+\kwd{key3}
+\end{keyword}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+\end{abstractbox}
+%
+%\end{fmbox}% uncomment this for twcolumn layout
+
+\end{frontmatter}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Main Body begins here                %%
+%%                                          %%
+%% Please refer to the instructions for     %%
+%% authors on:                              %%
+%% http://www.biomedcentral.com/info/authors%%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%% See the Results and Discussion section   %%
+%% for details on how to create sub-sections%%
+%%                                          %%
+%% use \cite{...} to cite references        %%
+%%  \cite{koon} and                         %%
+%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
+%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
+% <put your article body there>
+
+%%%%%%%%%%%%%%%%
+%% Background %%
+%%
+\section{Introduction}
+Introduction Text
+
+\section{Materials and methods}
+
+\subsection{Genome collection and annotation}
+A full list of P. aeruginosa species, consisting of 4532
+strains, was downloaded from RefSeq database \cite{refseq} (on April
+2019). In addition, the corresponding annotation
+files that include (1) genomic sequences, (2) nucleotide and
+(3) protein sequences for coding genes, and (4) feature tables
+were downloaded from the RefSeq database as well.
+Next, we used The Pathosystems Resource Integration Center (PATRIC) \cite{patric} to get the antibiotic resistance information of P. aeruginosa strains for 5 different antibiotics. We chose the top 5 antibiotics which had the biggest amount of labeled data available, and thus receiving 5 different classification tasks.
+PATRIC provides 3 possible AMR labels: resistant, susceptible and intermediate. In this research we decided to ignore any samples that were classified as intermediate. By doing that we reduced our dataset size between 4-7\% in favor of having a binary classification task with more pure and accurate labels.
+For each antibiotic, we divided our labeled strains samples into 5 equally-sized groups using a stratified random split algorithm. This split algorithm ensures that each group will have the same proportion of  resistant and susceptible samples as in the original dataset.
+In all of our experiments we used 5-fold cross validation to evaluate the model performance where in each split 1 group was used for the test set and the 4 other groups were used for the train set. 
+
+\subsection{Feature Extraction methods}
+
+As part of this research we explored several methods for extracting 
+features out of our raw data
+
+\subsubsection {Genes clusters representations}
+%Clusters , matrix, genes as features
+We stared by combining the protein sequences for coding genes of all strains (both labeled and unlabeled) into one fasta file. The header for each sequence in the combined file was created using the pattern \textless{}strain\_id\textgreater{}\_\textless{}gene\_id\textgreater{} so it will be easy to follow which genes were included in each cluster.
+\newline
+CD-HIT was utilized to group the predicted genes into gene clusters using the following command: cd-hit -c 0.70 -n 5 -M 16000 -g 1 -p 1. 
+
+
+\subsubsection {k-mers counters}
+The first phase in our process is downloading the FASTA files of all strains of P. aeruginosa. For each file, we scan the whole sequence and extract the k-mers. k-mer refers to all the possible subsequences (of length k) obtained from reading through the genome. We then save for each file the unique k-mers count, meaning the number of times each k-mer subsequence appeared in the file. Then, we summarized the k-mers count of all the strains of P. aeruginosa . For each unique k-mer, we save a list in the size of the number of strains, where each element in the list represent the k-mer count of each strain. We hold a key-value database to map each strain to his index in the list. Eventually, the values of each k-mer count will be used as our features.
+
+
+
+\subsection{Software packages and tools}
+All code developed under this research was implemented using Python 3.8 running a Linux platform. It uses bioinformatics, data analysis and machine learning packages. The bioinformatics packages are Biopython (v1.78) \cite{cock2009biopython} and NCBI Blast \cite{altschul1990basic_blast}. The data packages are pandas (v1.1.13) \cite{mckinney2010data_pandas} and numpy (v1.19.4) \cite{oliphant2006guide_numpy}. The machine learning packages are scikit-learn (v0.23.2) \cite{pedregosa2011scikit}, XGBoost (v1.2.0) \cite{xgboost} and Gensim (v3.8.3) \cite{rehurek_lrec}.
+
+% \subsection{Pangenome construction}
+% \subsection{Strain collection and antibiotic resistance profiling}
+% \subsection{AMR prediction based on Pan-genome}
+
+
+
+\subsection{k-mer representation of Genome/All Genes/Accessory genes}
+Aggregation of k-mers on the sequences. 
+
+\subsection{Embeddings  of the accessory genes}
+We converted sequences into words.
+
+1. Overlapping vs non-overlapping windows. We used window=10. 
+
+2. Aggregation of embeddings vs scores.
+
+Parameteres:
+Embedding window size. Embedding vector size.
+
+\subsection{Embedding of gene content}
+Let the ~50,000 clusters to represent a vocabulary. 
+For each strain, we replaced the gene with the matching word from the vocabulary based on the cluster it belongs to. It created a document of a size ~6000. 
+
+parameters: window size,....
+
+Machine learning algorithms:
+XGBoost
+KNN
+
+parameters.
+feature selection
+
+
+\section{Results}
+
+\subsection{Data overview}
+We downloaded ~4000 strains of PA. For X of them we retrieved antibiotic resistance data for 5 different antibiotics. Data distribution is shown in Table Y. 
+
+Table showing numbers of Resistant/Susceptible strains for each antibiotics. 
+
+\subsection{Pan-genome analysis}
+X clusters,
+core genes and accessory genes. 
+
+Think about possible figures. 
+
+\subsection{Baseline analysis}
+
+Table or figure heatmap
+
+\subsection{Embeddings}
+
+Table or figure heatmap
+Refer to differences.
+Take-home messages from the figure
+
+
+
+\subsection{Embedding gene content}
+
+\section{Discussion}
+Discussion text
+
+\section{Conclusions}
+Conclusions Text
+
+
+
+\subsection*{Evaluation metrics:}
+AUC,... 
+
+\subsection*{implementation}
+
+\subsection*{Code and data availability}
+Link to github
+
+
+\subsection*{Mapping to CARD and COG}
+
+
+\section*{points to discussion}
+Why not to do embedding on the whole genome. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+% if your bibliography is in bibtex format, use those commands:
+\bibliographystyle{bmc-mathphys} % Style BST file (bmc-mathphys, vancouver, spbasic).
+\bibliography{tomer_article}      % Bibliography file (usually '*.bib' )
+% for author-year bibliography (bmc-mathphys or spbasic)
+% a) write to bib file (bmc-mathphys only)
+% @settings{label, options="nameyear"}
+% b) uncomment next line
+%\nocite{label}
+
+% or include bibliography directly:
+% \begin{thebibliography}
+% \bibitem{b1}
+% \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Figures                       %%
+%%                               %%
+%% NB: this is for captions and  %%
+%% Titles. All graphics must be  %%
+%% submitted separately and NOT  %%
+%% included in the Tex document  %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%
+% %% Do not use \listoffigures as most will included as separate files
+\clearpage
+
+\end{document}
